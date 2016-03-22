@@ -58,3 +58,18 @@ processes       = 10
 socket          = /var/www/myview/myview.sock
 vacuum          = true
 ```
+
+设置语言
+
+/var/www/myview/conf/settings_local.py 
+
+```
+LANGUAGE_CODE = 'zh-cn'
+```
+
+添加[zh_CN](https://github.com/isoft-linux/reviewboard/tree/master/reviewboard/locale/zh_CN/LC_MESSAGES)
+
+```
+cd /usr/lib/python2.7/site-packages/ReviewBoard-2.5.3-py2.7.egg/reviewboard 
+django-admin compilemessages
+```
